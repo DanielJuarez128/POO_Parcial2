@@ -31,6 +31,7 @@ public class Principal extends javax.swing.JFrame {
 
         lblTitulo = new javax.swing.JLabel();
         lblImagen = new javax.swing.JLabel();
+        btnClaveSA = new javax.swing.JButton();
         btnSalir = new javax.swing.JButton();
         pnlBotones = new javax.swing.JPanel();
         btnInsertar = new javax.swing.JButton();
@@ -38,7 +39,6 @@ public class Principal extends javax.swing.JFrame {
         btnEliminar = new javax.swing.JButton();
         btnConsultaIndividual = new javax.swing.JButton();
         btnPorcentajeEfectividad = new javax.swing.JButton();
-        btnClaveSA = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -46,6 +46,14 @@ public class Principal extends javax.swing.JFrame {
         lblTitulo.setText("COMPETENCIA DE TIROS AL ARO DE BALONCESTO");
 
         lblImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/uca/parcial2_poo/baloncesto.png"))); // NOI18N
+
+        btnClaveSA.setFont(new java.awt.Font("Monospaced", 2, 12)); // NOI18N
+        btnClaveSA.setText("Editar clave SA");
+        btnClaveSA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnClaveSAActionPerformed(evt);
+            }
+        });
 
         btnSalir.setFont(new java.awt.Font("Monospaced", 2, 12)); // NOI18N
         btnSalir.setText("Salir del programa");
@@ -124,14 +132,6 @@ public class Principal extends javax.swing.JFrame {
                 .addComponent(btnPorcentajeEfectividad)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-
-        btnClaveSA.setFont(new java.awt.Font("Monospaced", 2, 12)); // NOI18N
-        btnClaveSA.setText("Editar clave SA");
-        btnClaveSA.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnClaveSAActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

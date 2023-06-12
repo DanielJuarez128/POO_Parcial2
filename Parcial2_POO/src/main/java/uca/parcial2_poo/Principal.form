@@ -80,6 +80,17 @@
         </Property>
       </Properties>
     </Component>
+    <Component class="javax.swing.JButton" name="btnClaveSA">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Monospaced" size="12" style="2"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Editar clave SA"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnClaveSAActionPerformed"/>
+      </Events>
+    </Component>
     <Component class="javax.swing.JButton" name="btnSalir">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -185,16 +196,5 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JButton" name="btnClaveSA">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Monospaced" size="12" style="2"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Editar clave SA"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnClaveSAActionPerformed"/>
-      </Events>
-    </Component>
   </SubComponents>
 </Form>

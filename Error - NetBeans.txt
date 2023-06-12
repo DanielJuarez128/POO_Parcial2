@@ -1,0 +1,63 @@
+cd C:\Users\HP\Documents\NetBeansProjects\Parcial2_POO; "JAVA_HOME=C:\\Program Files\\Java\\jdk-20" cmd /c "\"C:\\Program Files\\NetBeans-18\\netbeans\\java\\maven\\bin\\mvn.cmd\" -Dexec.vmArgs= \"-Dexec.args=${exec.vmArgs} -classpath %classpath ${exec.mainClass} ${exec.appArgs}\" -Dexec.appArgs= -Dexec.mainClass=uca.parcial2_poo.Parcial2_POO \"-Dexec.executable=C:\\Program Files\\Java\\jdk-20\\bin\\java.exe\" \"-Dmaven.ext.class.path=C:\\Program Files\\NetBeans-18\\netbeans\\java\\maven-nblib\\netbeans-eventspy.jar\" process-classes org.codehaus.mojo:exec-maven-plugin:3.1.0:exec"
+Scanning for projects...
+
+---------------------< UCA.00012922:Parcial2_POO >----------------------
+Building Parcial2_POO 1.0-SNAPSHOT
+  from pom.xml
+--------------------------------[ jar ]---------------------------------
+
+--- resources:3.3.0:resources (default-resources) @ Parcial2_POO ---
+skip non existing resourceDirectory C:\Users\HP\Documents\NetBeansProjects\Parcial2_POO\src\main\resources
+
+--- compiler:3.10.1:compile (default-compile) @ Parcial2_POO ---
+Changes detected - recompiling the module!
+Compiling 6 source files to C:\Users\HP\Documents\NetBeansProjects\Parcial2_POO\target\classes
+
+--- exec:3.1.0:exec (default-cli) @ Parcial2_POO ---
+Error: Could not find or load main class uca.parcial2_poo.Parcial2_POO
+Caused by: java.lang.ClassNotFoundException: uca.parcial2_poo.Parcial2_POO
+Command execution failed.
+org.apache.commons.exec.ExecuteException: Process exited with an error: 1 (Exit value: 1)
+    at org.apache.commons.exec.DefaultExecutor.executeInternal (DefaultExecutor.java:404)
+    at org.apache.commons.exec.DefaultExecutor.execute (DefaultExecutor.java:166)
+    at org.codehaus.mojo.exec.ExecMojo.executeCommandLine (ExecMojo.java:1000)
+    at org.codehaus.mojo.exec.ExecMojo.executeCommandLine (ExecMojo.java:947)
+    at org.codehaus.mojo.exec.ExecMojo.execute (ExecMojo.java:471)
+    at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:126)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:342)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:330)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:213)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:175)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.access$000 (MojoExecutor.java:76)
+    at org.apache.maven.lifecycle.internal.MojoExecutor$1.run (MojoExecutor.java:163)
+    at org.apache.maven.plugin.DefaultMojosExecutionStrategy.execute (DefaultMojosExecutionStrategy.java:39)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:160)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:105)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:73)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:53)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:118)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:261)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:173)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:101)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:827)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:272)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:195)
+    at jdk.internal.reflect.DirectMethodHandleAccessor.invoke (DirectMethodHandleAccessor.java:104)
+    at java.lang.reflect.Method.invoke (Method.java:578)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:282)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:225)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:406)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:347)
+------------------------------------------------------------------------
+BUILD FAILURE
+------------------------------------------------------------------------
+Total time:  3.613 s
+Finished at: 2023-06-12T16:15:40-06:00
+------------------------------------------------------------------------
+Failed to execute goal org.codehaus.mojo:exec-maven-plugin:3.1.0:exec (default-cli) on project Parcial2_POO: Command execution failed.: Process exited with an error: 1 (Exit value: 1) -> [Help 1]
+
+To see the full stack trace of the errors, re-run Maven with the -e switch.
+Re-run Maven using the -X switch to enable full debug logging.
+
+For more information about the errors and possible solutions, please read the following articles:
+[Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

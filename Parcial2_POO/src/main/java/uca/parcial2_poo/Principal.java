@@ -46,6 +46,8 @@ public class Principal extends javax.swing.JFrame {
         lblTitulo.setText("COMPETENCIA DE TIROS AL ARO DE BALONCESTO");
 
         lblImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/uca/parcial2_poo/baloncesto.png"))); // NOI18N
+        //lblImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/uca/parcial2_poo/baloncesto.png")).getImage()); // NOI18N
+        //lblImagen.setIcon(new javax.swing.ImageIcon("/uca/parcial2_poo/baloncesto.png"));
 
         btnClaveSA.setFont(new java.awt.Font("Monospaced", 2, 12)); // NOI18N
         btnClaveSA.setText("Editar clave SA");

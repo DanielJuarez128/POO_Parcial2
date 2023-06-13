@@ -99,7 +99,6 @@ public class DELETE extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        System.out.print(evt);
         Connection conexion = null;
         PreparedStatement sentencia = null;
         String nombre;

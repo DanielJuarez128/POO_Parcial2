@@ -108,7 +108,6 @@ public class SELECT extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultaActionPerformed
-        System.out.print(evt);
         Connection conexion = null;
         PreparedStatement sentencia = null;
         String nombreC;

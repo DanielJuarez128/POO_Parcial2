@@ -135,7 +135,6 @@ public class INSERT extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnInsertarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInsertarActionPerformed
-        System.out.print(evt);
         Connection conexion = null;
         PreparedStatement sentencia = null;
         String nombre, apellido;

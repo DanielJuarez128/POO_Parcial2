@@ -172,42 +172,35 @@ public class Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnInsertarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInsertarActionPerformed
-        System.out.print(evt);
         INSERT panelInsertar = new INSERT();
         panelInsertar.setVisible(true);
     }//GEN-LAST:event_btnInsertarActionPerformed
 
     private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
-        System.out.print(evt);
         UPDATE panelEditar = new UPDATE();
         panelEditar.setVisible(true);
     }//GEN-LAST:event_btnModificarActionPerformed
 
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
-        System.out.print(evt);
         DELETE panelEliminar = new DELETE();
         panelEliminar.setVisible(true);
     }//GEN-LAST:event_btnEliminarActionPerformed
 
     private void btnConsultaIndividualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultaIndividualActionPerformed
-        System.out.print(evt);
         SELECT panelConsulta = new SELECT();
         panelConsulta.setVisible(true);
     }//GEN-LAST:event_btnConsultaIndividualActionPerformed
 
     private void btnPorcentajeEfectividadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPorcentajeEfectividadActionPerformed
-        System.out.print(evt);
         FullSelect panelConsultas = new FullSelect();
         panelConsultas.setVisible(true);
     }//GEN-LAST:event_btnPorcentajeEfectividadActionPerformed
 
     private void btnClaveSAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClaveSAActionPerformed
-        System.out.print(evt);
         claveSA = JOptionPane.showInputDialog("Ingrese la clave del usuario sa:");
     }//GEN-LAST:event_btnClaveSAActionPerformed
 
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
-        System.out.print(evt);
         this.dispose();
     }//GEN-LAST:event_btnSalirActionPerformed
 

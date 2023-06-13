@@ -141,7 +141,6 @@ public class UPDATE extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
-        System.out.print(evt);
         Connection conexion = null;
         PreparedStatement sentencia = null;
         String nombre, apellido;

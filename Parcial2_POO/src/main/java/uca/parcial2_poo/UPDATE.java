@@ -148,7 +148,7 @@ public class UPDATE extends javax.swing.JFrame {
         try{
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             String url = "jdbc:sqlserver://localhost:1433;databaseName=CompetenciaTirosAlAro; TrustServerCertificate=True";
-            conexion = DriverManager.getConnection(url, "sa", Principal.claveSA);
+            conexion = DriverManager.getConnection(url, "sa", Principal.getClaveSA());
             String consulta = "update Participantes set apellido = ?, tiros_lanzados = ?, tiros_encestados = ? where nombre = ?";
             sentencia = conexion.prepareStatement(consulta);
             apellido = txtApellido.getText();

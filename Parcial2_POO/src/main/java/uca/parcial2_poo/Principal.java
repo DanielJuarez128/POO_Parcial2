@@ -12,12 +12,22 @@ import javax.swing.JOptionPane;
  */
 public class Principal extends javax.swing.JFrame {
     
-    public static String claveSA = "";
+    protected static String claveSA;
+
+    public static String getClaveSA() {
+        return claveSA;
+    }
+
+    public static void setClaveSA(String claveSA) {
+        Principal.claveSA = claveSA;
+    }
+
     /**
      * Creates new form Principal
      */
     public Principal() {
         initComponents();
+        pswClaveSA.grabFocus();
     }
 
     /**
@@ -31,14 +41,16 @@ public class Principal extends javax.swing.JFrame {
 
         lblTitulo = new javax.swing.JLabel();
         lblImagen = new javax.swing.JLabel();
-        btnClaveSA = new javax.swing.JButton();
-        btnSalir = new javax.swing.JButton();
         pnlBotones = new javax.swing.JPanel();
         btnInsertar = new javax.swing.JButton();
         btnModificar = new javax.swing.JButton();
         btnEliminar = new javax.swing.JButton();
         btnConsultaIndividual = new javax.swing.JButton();
         btnPorcentajeEfectividad = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        pswClaveSA = new javax.swing.JPasswordField();
+        btnClaveSA = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -46,24 +58,6 @@ public class Principal extends javax.swing.JFrame {
         lblTitulo.setText("COMPETENCIA DE TIROS AL ARO DE BALONCESTO");
 
         lblImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/uca/parcial2_poo/baloncesto.png"))); // NOI18N
-        //lblImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/uca/parcial2_poo/baloncesto.png")).getImage()); // NOI18N
-        //lblImagen.setIcon(new javax.swing.ImageIcon("/uca/parcial2_poo/baloncesto.png"));
-
-        btnClaveSA.setFont(new java.awt.Font("Monospaced", 2, 12)); // NOI18N
-        btnClaveSA.setText("Editar clave SA");
-        btnClaveSA.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnClaveSAActionPerformed(evt);
-            }
-        });
-
-        btnSalir.setFont(new java.awt.Font("Monospaced", 2, 12)); // NOI18N
-        btnSalir.setText("Salir del programa");
-        btnSalir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSalirActionPerformed(evt);
-            }
-        });
 
         btnInsertar.setFont(new java.awt.Font("Monospaced", 2, 12)); // NOI18N
         btnInsertar.setText("Agregar registros");
@@ -135,6 +129,40 @@ public class Principal extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        btnClaveSA.setFont(new java.awt.Font("Monospaced", 2, 12)); // NOI18N
+        btnClaveSA.setText("Ingresar clave");
+        btnClaveSA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnClaveSAActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setText("Ingresar clave del usuario:");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnClaveSA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pswClaveSA))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(pswClaveSA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnClaveSA)
+                .addContainerGap())
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -146,11 +174,9 @@ public class Principal extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(lblImagen)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(pnlBotones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(btnSalir, javax.swing.GroupLayout.Alignment.TRAILING))
-                            .addComponent(btnClaveSA, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(pnlBotones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -159,13 +185,11 @@ public class Principal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(lblTitulo)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(pnlBotones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(47, 47, 47)
-                        .addComponent(btnClaveSA)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnSalir))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(lblImagen))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -199,12 +223,11 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnPorcentajeEfectividadActionPerformed
 
     private void btnClaveSAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClaveSAActionPerformed
-        claveSA = JOptionPane.showInputDialog("Ingrese la clave del usuario sa:");
+        char[] arrayC = pswClaveSA.getPassword();
+        String sa = new String(arrayC);
+        setClaveSA(sa);
+        pswClaveSA.setText("");
     }//GEN-LAST:event_btnClaveSAActionPerformed
-
-    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
-        this.dispose();
-    }//GEN-LAST:event_btnSalirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -249,9 +272,11 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton btnInsertar;
     private javax.swing.JButton btnModificar;
     private javax.swing.JButton btnPorcentajeEfectividad;
-    private javax.swing.JButton btnSalir;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblImagen;
     private javax.swing.JLabel lblTitulo;
     private javax.swing.JPanel pnlBotones;
+    private javax.swing.JPasswordField pswClaveSA;
     // End of variables declaration//GEN-END:variables
 }

@@ -142,7 +142,7 @@ public class INSERT extends javax.swing.JFrame {
         try{
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             String url = "jdbc:sqlserver://localhost:1433;databaseName=CompetenciaTirosAlAro; TrustServerCertificate=True";
-            conexion = DriverManager.getConnection(url, "sa", Principal.claveSA);
+            conexion = DriverManager.getConnection(url, "sa", Principal.getClaveSA());
             String consulta = "insert into Participantes values (?, ?, ?, ?)";
             sentencia = conexion.prepareStatement(consulta);
             nombre = txtNombre.getText();

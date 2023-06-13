@@ -114,7 +114,7 @@ public class SELECT extends javax.swing.JFrame {
         try{
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             String url = "jdbc:sqlserver://localhost:1433;databaseName=CompetenciaTirosAlAro; TrustServerCertificate=True";
-            conexion = DriverManager.getConnection(url, "sa", Principal.claveSA);
+            conexion = DriverManager.getConnection(url, "sa", Principal.getClaveSA());
             String consulta = "select * from Participantes where nombre = ?";
             sentencia = conexion.prepareStatement(consulta);
             nombreC = txtNombre.getText();
